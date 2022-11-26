@@ -1,5 +1,45 @@
 
-	<div id="mySidenav" class="sidenav">
+	 <nav>
+    <ul class="menu-list">
+        <li class="menu-itm"><img class="menu-itm-icon" src="../../assets/images/menu.svg" alt="Menu"><span class="link-txt">Menu</span></li>
+        <li class="menu-itm"><img class="menu-itm-icon" src="../../assets/images/content-management.svg" alt="Content management"><span class="link-txt">Content management</span><img class="sub-menu-icon" src="../../assets/images/down-arrow.svg" alt="down-arrow"></li>
+        <li class="menu-itm"><img class="menu-itm-icon" src="../../assets/images/courses.svg" alt="Courses"><span class="link-txt">Courses</span></li>
+    </ul>
+</nav>
+<header class="global-header">
+    <a href="#" class="logo-wrp"><img src="../../assets/images/logo.png" alt="logo"></a>
+</header>
+<main>
+    <header class="pg-header">
+        <h1 class="pg-title">Books</h1>
+        <button class="btn">Create New Book</button>
+    </header>
+    <section class="search-wrp">
+        <div class="serach-field">
+            <img src="../../assets/images/search.svg" alt="search">
+            <input type="text" placeholder="Search">
+        </div>
+    </section>
+    <section class="result">
+        <h4 class="section-title">All Books</h4>
+        <div class="result-hloder">
+            <div class="book-card-itm" *ngFor="let book of allBooks.items; index as i" >
+                <h4 class="card-title">{{ book.volumeInfo.title}}</h4>
+                <div class="card-details">
+                <span class="card-itm-label">Authors: <span class="value-txt">{{ book.volumeInfo.authors}}</span></span>
+                <span class="card-itm-label">Publisher: <span class="value-txt">{{ book.volumeInfo.publisher}}</span></span>
+                <span class="card-itm-label">Published Date: <span class="value-txt">{{  book.volumeInfo.publishedDate}}</span></span>
+                </div>
+            </div>
+        
+        </div>
+    </section>
+</main>
+  
+  
+  
+  
+  <!-- <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" (click)="closeNav()"></a>
     <a href="#"><i class="fa fa-fw fa-home"></i>Content Management</a>
     <a href="#"><i class="fa fa-fw fa-home"></i>Courses</a>
@@ -8,65 +48,8 @@
   <div id="main" (click)="openNav()">
   
     <span style="font-size:30px;cursor:pointer" >&#9776; Menu</span>
-  </div>
+  </div> -->
   
   
 
 
-
-    
-    <div class="pusher">
-      <div class="btn"> <button class="button button2">Create New Book</button></div>
-      <div class="main-content" (click)="closeNav()">
-        <div> <span> <h1>Books</h1> </span></div> 
-       
-      <div>
-        <input type="text" name="search" placeholder="Search..">
-        </div>
-        <div> <span> <h2>All Books</h2> </span></div>
-        <div class="grid-Container">
-          <!-- <div class="grid-container-row"> -->
-            <!-- <div class="content-align-top  ui fluid card" > -->
-              <div class="card-wrp w3-container" *ngFor="let book of allBooks.items; index as i" >
-
-                <div class="w3-card-4">
-                  <header class="w3-container w3-white">
-                    <h3>{{ book.volumeInfo.title}}</h3>
-                  </header>
-              
-                  <div class="w3-container">
-                    Authors: {{ book.volumeInfo.authors}}
-                  </div>
-                  <div class="w3-container">
-                    Publisher: {{ book.volumeInfo.publisher}}
-                  </div>
-                  <div class="w3-container">
-                    Published Date: {{  book.volumeInfo.publishedDate}}
-                  </div>
-                                
-                </div>
-              </div>
-              <!-- <div class="content">
-             
-                <div class="header">
-                  <div>
-                    {{ book.volumeInfo.title}}
-                  </div>
-                </div>
-                
-                <div class="description">
-                  "Authors": {{ book.volumeInfo.authors}}
-                </div>
-                <div class="description">
-                  "Publisher": {{ book.volumeInfo.publisher}}
-                </div>
-                <div class="description">
-                  "Published Date": {{  book.volumeInfo.publishedDate}}
-                </div>
-              </div> -->
-          
-            <!-- </div> -->
-          <!-- </div> -->
-        </div>
-      </div>
-    </div>

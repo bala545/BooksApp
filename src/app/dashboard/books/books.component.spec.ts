@@ -17,7 +17,7 @@ describe('BooksComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  it('should exist', () => {
+    expect(component).toBeDefined();
+});
 });

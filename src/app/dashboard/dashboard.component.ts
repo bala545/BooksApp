@@ -1,32 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-//import $ from "jquery";
-declare var $: any; 
-declare var window : any;
-window.$ = window.jQuery = $; 
-//window.jQuery = $;
 import "semantic-ui-css/semantic.js";
 import { BookService } from './book.service';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
 import {catchError, tap, map} from 'rxjs/operators';
+
 // import { MatCard, MatCardTitle,MatCardSubtitle,MatCardContent} from '@angular/material/card';
 // import {MatFormField} from '@angular/material/form-field';
 
-
-
-$(document).ready(function () {
-  $('.ui.dropdown').dropdown();
-  $('.sidebar-menu-toggler').on('click', function () {
-    var target = $(DashboardComponent).data('target');
-    $(target)
-      .sidebar({
-        dinPage: true,
-        transition: 'overlay',
-        mobileTransition: 'overlay'
-      })
-      .sidebar('toggle');
-  });
-});
 
 @Component({
   selector: 'app-dashboard',

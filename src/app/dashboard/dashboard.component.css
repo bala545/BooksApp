@@ -1,107 +1,141 @@
-.menu-icon {
-  width: 35px;
-  height: 5px;
-  background-color: black;
-  margin: 6px 0;
-} 
-.example-card {
-  max-width: 400px;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-p {
-  font-family: Lato;
-}
-
-.grid-Container {
-  /* width: 30%;  */
-  /* display: table; */
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 10px;
-  /* background-color: #cfd5da; */
-  padding: 10px;
-}
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
-}
-.button {
-  background-color: #008CBA; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+body {
+  font-family: sans-serif;
   font-size: 16px;
-  margin: 4px 2px;
+}
+nav {
+  padding: 2rem 1rem 1rem;
+  width: 260px;
+  float: left;
+  height: 100vh;
+  box-shadow: 0px 0px 75px -5px #ddd;
+}
+.menu-itm {
+  list-style: none;
+  margin: 0 0 30px 0;
   cursor: pointer;
 }
-.btn {
-  margin-left: 85%;
+.menu-itm .link-txt {
+  display: inline-block;
+  margin: 0 0 0 15px;
+  color: #444;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
 }
-.card-wrp {
-  border-left: 2px solid goldenrod;
+.menu-itm-icon {
+  width: 25px;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
 }
-.button2 {background-color: #008CBA;} /* Blue */
-.input[type=text] {
-  width: 150px;
-  box-sizing: border-box;
-  border-bottom: 2px solid #ccc;
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
-  border-radius: 1px;
-  font-size: 16px;
-  background-color: white;
-  background-image: "/BooksApp/src/assets/images/searchicon.png";
-  background-position: 10px 10px; 
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
+.menu-itm-icon {
+  width: 35px;
+  height: auto;
 }
-
-/* .grid-container-row {
-  display: table-row;
-} */
-/* .grid-container-row-cell {
-  display: table-cell;
-} */
-.content-align-top {
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
+.sub-menu-icon {
+  width: 20px;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
 }
 
-body ::-webkit-scrollbar {
-    width: 6px;
-  }
-  .ui.vertical.menu.sidebar-menu {
-    margin-top: 40px !important;
-    max-height: calc(100% - 40px) !important;
-    height: calc(100% - 40px) !important;
-  }
-  .ui.vertical.menu.sidebar-menu .item i.icon {
-    float: left;
-    margin: 0em 0.5em 0em 0em;
-  }
+.global-header {
+  width: calc(100% - 270px);
+  float: right;
+  padding: 2rem 1rem 0 ;
+}
+.logo-wrp img {
+  width: 110px;
+  height: auto;
+}
+
+.pg-title {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+main {
+  width: calc(100% - 260px);
+  display: inline-block;
+  float: right;
+  padding: 2rem 2rem 0;
+}
+
+.pg-header .btn {
+  float: right;
+  border-style: none;
+  background-color: #345FF0;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+
+.serach-field {
+  display: inline-block;
+  border-bottom: 1px solid #888;
+  padding: 0 0 0.25rem 0;
+  width: 40%;
+}
+.serach-field img {
+  width: 20px;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+.serach-field input {
+  width: calc(100% - 50px);
+  border-style: none;
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 0.9rem;
+  margin: 0 0 0 0.25rem;
+}
+.search-wrp {
+  margin: 2.5rem 0 1.25rem;
+}
+
+.section-title {
+  font-weight: 900;
+}
+.result-hloder {
+  margin: 1.5rem 0 0;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+.book-card-itm {
+  width: 49%;
+  display: inline-block;
+  box-shadow: 0px 1px 3px 1px #ccc;
+  padding: 1rem;
+  border-radius: 4px;
+  border-left: 4px solid #FCA11E ;
+  margin: 0 0 1.5rem 0;
+}
+.card-title {
+  margin: 0 0 0.5rem 0;
+}
+.card-itm-label {
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #555;
+}
+
+
   .main-content {
     margin-top: 40px;
   }
-  @media (min-width: 768px) {
-    .ui.vertical.menu.sidebar-menu {
-      visibility: visible;
-      transform: translate3d(0, 0, 0);
-      width: 15rem !important;
-    }
-    .main-content {
-      margin-left: 15rem;
-    }
-    .sidebar-menu-toggler {
-      display: none !important;
-    }
-  }
+ 
 
 
   .sidenav {
