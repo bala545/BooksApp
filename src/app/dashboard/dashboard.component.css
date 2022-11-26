@@ -1,0 +1,149 @@
+.menu-icon {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+} 
+.example-card {
+  max-width: 400px;
+}
+p {
+  font-family: Lato;
+}
+
+.grid-Container {
+  /* width: 30%;  */
+  /* display: table; */
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  /* background-color: #cfd5da; */
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+.button {
+  background-color: #008CBA; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.btn {
+  margin-left: 85%;
+}
+.card-wrp {
+  border-left: 2px solid goldenrod;
+}
+.button2 {background-color: #008CBA;} /* Blue */
+.input[type=text] {
+  width: 150px;
+  box-sizing: border-box;
+  border-bottom: 2px solid #ccc;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-radius: 1px;
+  font-size: 16px;
+  background-color: white;
+  background-image: "/BooksApp/src/assets/images/searchicon.png";
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* .grid-container-row {
+  display: table-row;
+} */
+/* .grid-container-row-cell {
+  display: table-cell;
+} */
+.content-align-top {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+body ::-webkit-scrollbar {
+    width: 6px;
+  }
+  .ui.vertical.menu.sidebar-menu {
+    margin-top: 40px !important;
+    max-height: calc(100% - 40px) !important;
+    height: calc(100% - 40px) !important;
+  }
+  .ui.vertical.menu.sidebar-menu .item i.icon {
+    float: left;
+    margin: 0em 0.5em 0em 0em;
+  }
+  .main-content {
+    margin-top: 40px;
+  }
+  @media (min-width: 768px) {
+    .ui.vertical.menu.sidebar-menu {
+      visibility: visible;
+      transform: translate3d(0, 0, 0);
+      width: 15rem !important;
+    }
+    .main-content {
+      margin-left: 15rem;
+    }
+    .sidebar-menu-toggler {
+      display: none !important;
+    }
+  }
+
+
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #FBF9F0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #111;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #7B7970;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  
