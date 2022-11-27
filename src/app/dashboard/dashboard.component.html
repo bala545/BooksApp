@@ -1,15 +1,15 @@
 
-	 <nav>
+	 <nav id="mySidenav" (click)="openNav()">
     <ul class="menu-list">
-        <li class="menu-itm"><img class="menu-itm-icon" src="../../assets/images/menu.svg" alt="Menu"><span class="link-txt">Menu</span></li>
-        <li class="menu-itm"><img class="menu-itm-icon" src="../../assets/images/content-management.svg" alt="Content management"><span class="link-txt">Content management</span><img class="sub-menu-icon" src="../../assets/images/down-arrow.svg" alt="down-arrow"></li>
-        <li class="menu-itm"><img class="menu-itm-icon" src="../../assets/images/courses.svg" alt="Courses"><span class="link-txt">Courses</span></li>
+        <li class="menu-itm"><img class="menu-itm-icon" src="../../assets/images/menu.svg" alt="Menu"><span *ngIf = "hideMenuitems" class="link-txt">Menu</span></li>
+        <li class="menu-itm"><img class="menu-itm-icon" src="../../assets/images/content-management.svg" alt="Content management"><span *ngIf = "hideMenuitems" class="link-txt">Content management</span><img *ngIf = "hideMenuitems" class="sub-menu-icon" src="../../assets/images/down-arrow.svg" alt="down-arrow"></li>
+        <li class="menu-itm"><img class="menu-itm-icon" src="../../assets/images/courses.svg" alt="Courses"><span *ngIf = "hideMenuitems"  class="link-txt">Courses</span></li>
     </ul>
 </nav>
-<header class="global-header">
-    <a href="#" class="logo-wrp"><img src="../../assets/images/logo.png" alt="logo"></a>
+<header class="global-header" id="glb-header" (click)="closeNav()">
+    <a href="#" class="logo-wrp"><img src="../../assets/images/logo.svg" alt="logo"></a>
 </header>
-<main>
+<main id="main" (click)="closeNav()">
     <header class="pg-header">
         <h1 class="pg-title">Books</h1>
         <button class="btn">Create New Book</button>
@@ -37,18 +37,7 @@
 </main>
   
   
-  
-  
-  <!-- <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()"></a>
-    <a href="#"><i class="fa fa-fw fa-home"></i>Content Management</a>
-    <a href="#"><i class="fa fa-fw fa-home"></i>Courses</a>
-  </div>
-  
-  <div id="main" (click)="openNav()">
-  
-    <span style="font-size:30px;cursor:pointer" >&#9776; Menu</span>
-  </div> -->
+
   
   
 

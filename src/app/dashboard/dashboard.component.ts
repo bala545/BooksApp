@@ -5,8 +5,7 @@ import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
 import {catchError, tap, map} from 'rxjs/operators';
 
-// import { MatCard, MatCardTitle,MatCardSubtitle,MatCardContent} from '@angular/material/card';
-// import {MatFormField} from '@angular/material/form-field';
+
 
 
 @Component({
@@ -22,9 +21,14 @@ export class DashboardComponent implements OnInit{
   title:string = "Book Name";
   allBooks:any = [];
   errorMessage:any = '';
+  hideMenuitems: boolean = false;
   constructor(private booService: BookService) { }
 
   ngOnInit(): void {
+    const header = document.getElementById('glb-header') as HTMLInputElement;
+    header.style.width = "calc(114% - 270px)";
+    const main = document.getElementById('main') as HTMLInputElement;
+    main.style.width = "calc(114% - 260px)";
     this.booService.getAllBooks().subscribe(books => {
        this.allBooks = books;
        console.log(this.allBooks);
@@ -36,15 +40,21 @@ export class DashboardComponent implements OnInit{
   openNav() {
     const input = document.getElementById('mySidenav') as HTMLInputElement;
     input.style.width = "250px";
+    const header = document.getElementById('glb-header') as HTMLInputElement;
+    header.style.width = "calc(100% - 270px)";
     const main = document.getElementById('main') as HTMLInputElement;
-    main.style.marginLeft = "250px";
+    main.style.width = "calc(100% - 260px)";
+    this.hideMenuitems = true;
   }
   
    closeNav() {
     const mySidenav = document.getElementById('mySidenav') as HTMLInputElement;
-    mySidenav.style.width = "0";
-    const mySidenav1 = document.getElementById('main') as HTMLInputElement;
-    mySidenav1.style.marginLeft= "0";
+    mySidenav.style.width = "60px";
+    const header = document.getElementById('glb-header') as HTMLInputElement;
+    header.style.width = "calc(114% - 270px)";
+    const main = document.getElementById('main') as HTMLInputElement;
+    main.style.width = "calc(114% - 260px)";
+    this.hideMenuitems = false;
   }
 
 }
